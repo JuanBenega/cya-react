@@ -1,0 +1,61 @@
+.header {
+    background-image: linear-gradient(to top, $color-fondo, $color-dest);
+    //padding-left: 75px;
+    font-family: $fuente;
+
+    img {
+        width: 15rem;
+
+        &:hover {
+            transform: scale(110%);
+        }
+
+        @include phone {
+            width: 10rem;
+        }
+
+    }
+
+    .navbarMenu {
+        flex-grow: 0;
+    }
+
+    .dropdown-menu {
+        --bs-dropdown-bg: none;
+        --bs-dropdown-border-color:unset;
+        --bs-dropdown-border-radius: none;
+        --bs-dropdown-border-width: 0;
+    }
+    .menuItem {
+        //font-family: $fuente;
+        font-size: $size-fuente-header;
+        width: max-content;
+        height: fit-content;
+        margin: 0 0.4rem;
+
+        @extend %boton-menu;
+
+        &:hover {
+            @extend %boton-menu-hover;
+            transform: scale(110%);
+        }
+
+        .menuServicios {
+            background-color: unset;
+            background-clip: unset;
+            border-radius: unset;
+            border: unset;
+        }
+
+        @include phone {
+            width: 100%;
+            border-radius: 0;
+            box-shadow: none;
+        }
+    }
+
+    @include phone {
+        width: auto;
+        padding-left: 0px;
+    }
+}
