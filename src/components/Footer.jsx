@@ -4,38 +4,31 @@ import Navbar from 'react-bootstrap/Navbar';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import LogoByN from '../img/LogoByN.png';
-import Whats from '../img/whatsapp.png';
-import Face from '../img/facebook.png';
-import Inst from '../img/instagram.png';
 import { Whatsapp, Facebook, Instagram } from "react-bootstrap-icons";
 
 const Footer = () => {
     return (
-        <Navbar className='footer'>
-            <Row >
+            <Row className='footer'>
                 <Container fluid className='navFooter'> 
                     <Col lg='4' sm='11'>
-                        <Nav className="me-auto">
+                        <Nav className="justify-content-center">
                             <Nav.Link href="https://web.whatsapp.com">
-                                {/* <img src={Whats} alt="Whatsapp" width="30%" /> */}
                                 <Whatsapp className='iconFooter'/>
                             </Nav.Link>
                             <Nav.Link href="#features">
-                                {/* <img src={Face} alt="Whatsapp" width="30%" /> */}
                                 <Facebook className='iconFooter'/>
                             </Nav.Link>
                             <Nav.Link href="#pricing">
-                                {/* <img src={Inst} alt="Whatsapp" width="30%" /> */}
                                 <Instagram className='iconFooter'/>
                             </Nav.Link>
                         </Nav>
                     </Col>
-                    <Col lg='4' sm='11'>
-                        <Nav className="me-auto menuFooter">
-                            <Nav.Link href="#home">Bienestar</Nav.Link>
-                            <Nav.Link href="#features">Entrenamiento</Nav.Link>
-                            <Nav.Link href="#pricing">Masajes</Nav.Link>
-                            <Nav.Link href="#pricing">Contacto</Nav.Link>
+                    <Col lg='4' sm='11' className='menuFooter'>
+                        <Nav className="menuFooter">
+                            <Nav.Link className='itemFooter' href="#features">Entrenamiento</Nav.Link>
+                            <Nav.Link className='itemFooter' href="#home">Bienestar</Nav.Link>
+                            <Nav.Link className='itemFooter' href="#pricing">Masajes</Nav.Link>
+                            <Nav.Link className='itemFooter' href="#pricing">Contacto</Nav.Link>
                         </Nav>
                     </Col>
                     <Col lg='4' sm='11'>
@@ -45,7 +38,6 @@ const Footer = () => {
                     </Col>
                 </Container>
             </Row>
-        </Navbar>
     )
 }
 

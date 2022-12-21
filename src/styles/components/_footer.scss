@@ -8,7 +8,9 @@
 
     .navFooter {
         width: 90%;
+        display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     img {
@@ -24,9 +26,14 @@
         flex-direction: column;
     }
 
+    .itemFooter {
+        color: $color-grey;
+
+    }
     .iconFooter {
         width: 3rem;
         height: 3rem;
+        color: $color-grey;
 
         &:hover {
             transform: scale(110%);
