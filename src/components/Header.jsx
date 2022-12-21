@@ -8,15 +8,15 @@ import Logo from '../img/Logo.png'
 const Header = () => {
 
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className='header'>
+    <Navbar sticky="top" collapseOnSelect expand="lg" bg="dark" variant="dark" className='header'>
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img src={Logo} alt="Logo Cuerpo y Armonía" className="img-fluid" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" className='navbarMenu'>
           <Nav className="me-auto">
-            <Nav.Link href="#pricing" className='menuItem'>Nosotros</Nav.Link>
+            <Nav.Link href="/" className='menuItem'>Nosotros</Nav.Link>
             <NavDropdown className='menuServicios menuItem' title="Servicios" id="collasible-nav-dropdown">
               <NavDropdown.Item className='menuItem' href="#action/3.1">Entrenamiento</NavDropdown.Item>
               <NavDropdown.Item className='menuItem' href="#action/3.2">Masajes</NavDropdown.Item>
