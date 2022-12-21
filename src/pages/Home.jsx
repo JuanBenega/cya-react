@@ -1,9 +1,18 @@
+import { useEffect } from "react";
 import { Row, Container, Col, Image } from 'react-bootstrap';
 import Img1 from '../img/imagen-1.avif'
 import Img2 from '../img/imagen-2.avif'
 import Img3 from '../img/imagen-3.avif'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Home = () => {
+
+    useEffect(() => {
+        AOS.init();
+      }, [])
+
+
     return (
         <Container className='us'>
             <Row>
@@ -23,15 +32,18 @@ const Home = () => {
                 <Col lg='6' sm='12' className='usImages '>
                     <Row>
                         <Col lg='6' sm='12'>
-                            <Image rounded fluid src={Img1} alt="Entrenamiento Corporal" className='usImg' />
+                            <Image rounded fluid src={Img1} alt="Entrenamiento Corporal" className='usImg' 
+                            data-aos="fade-right" data-aos-duration="2000" />
                         </Col>
                         <Col lg='6' sm='12'>
-                            <Image rounded fluid src={Img2} alt="Entrenamiento Corporal" className='usImg' />
+                            <Image rounded fluid src={Img2} alt="Entrenamiento Corporal" className='usImg'
+                            data-aos="fade-left" data-aos-duration="2000" />
                         </Col>
                     </Row>
                     <Row className='d-flex justify-content-center'>
                     <Col lg='6' sm='12'>
-                            <Image rounded fluid src={Img3} alt="Entrenamiento Corporal" className='usImg mx-auto' />
+                            <Image rounded fluid src={Img3} alt="Entrenamiento Corporal" className='usImg mx-auto'
+                            data-aos="fade-up" data-aos-duration="2000" />
                         </Col>
                     </Row>
                 </Col>
