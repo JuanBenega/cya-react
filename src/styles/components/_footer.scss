@@ -1,0 +1,43 @@
+.footer {
+    background-image: linear-gradient(to bottom, $color-fondo, $color-prim);
+    @extend %flex-evenly;
+    font-family: $fuente;
+    font-weight: bold;
+    font-size: $size-fuente-footer;
+
+
+    .navFooter {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    img {
+        width: 15rem;
+
+        &:hover {
+            transform: scale(110%);
+        }
+    }
+
+    .menuFooter {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .itemFooter {
+        color: $color-grey;
+
+    }
+    .iconFooter {
+        width: 3rem;
+        height: 3rem;
+        color: $color-grey;
+
+        &:hover {
+            transform: scale(110%);
+        }
+    }
+    
+}
