@@ -1,0 +1,51 @@
+.us {
+    font-family: $fuente;
+}
+
+h1 {
+    padding: $pad-h1;
+    @extend %texto-titulos;
+
+    @include phone {
+        padding: 10px 5px;
+    }
+}
+
+h2 {
+    padding: 25px 0px;
+    @extend %texto-titulos;
+    
+
+    @include phone {
+        padding: 5px 5px;
+    }
+}
+
+.usText {
+    padding: 20px 50px;
+    font-size: $size-fuente-nosotros;
+
+    span {
+        font-weight: bold;
+    }
+
+    @include phone {
+        padding: 5px 5px;
+        text-align: center;
+        font-size: $size-fuente-responsive;
+    }
+}
+
+.usImages {
+padding-top: 3rem;
+
+    @include phone {
+        display: none;
+    }
+}
+
+.usImg {
+    width: 100%;
+    object-fit: cover;
+                            @extend %sombra-imagenes;
+}
