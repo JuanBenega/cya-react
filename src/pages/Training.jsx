@@ -1,9 +1,17 @@
+import { useEffect } from "react";
 import { Row, Container, Col, Image } from 'react-bootstrap';
 import Img1 from '../img/entrenamiento-1.avif'
 import Img2 from '../img/entrenamiento-2.avif'
 import Img3 from '../img/entrenamiento-3.avif'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Training = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
   return (
     <Container fluid className='training'>
       <h1>Programas de entrenamiento integrales</h1>
@@ -22,13 +30,15 @@ const Training = () => {
             cuerpo más fuerte y sano.</p>
         </Col>
         <Col lg={4}>
-          <Image rounded fluid src={Img1} alt='Entrenamiento corporal básico' className='usImg'/>
+          <Image rounded fluid src={Img1} alt='Entrenamiento corporal básico' className='usImg' data-aos="zoom-in-down"
+            data-aos-duration="2000" />
         </Col>
       </Row>
       {/* Articulo 2 */}
       <Row className='entrenamiento-par'>
         <Col lg={4}>
-          <Image rounded fluid src={Img2} alt='Entrenamiento Pilates reformer' className='usImg'/>
+          <Image rounded fluid src={Img2} alt='Entrenamiento Pilates reformer' className='usImg' data-aos="zoom-in-down"
+            data-aos-duration="2000" />
         </Col>
         <Col lg={8} className='article'>
           <h2>Programa Pilates Reformer</h2>
@@ -55,7 +65,8 @@ const Training = () => {
             cuerpo fuerte y saludable.</p>
         </Col>
         <Col lg={4}>
-          <Image rounded fluid src={Img3} alt='Entrenamiento corporal avanzado' className='usImg' />
+          <Image rounded fluid src={Img3} alt='Entrenamiento corporal avanzado' className='usImg' data-aos="zoom-in-down"
+            data-aos-duration="2000" />
         </Col>
       </Row>
     </Container>
