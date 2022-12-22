@@ -14,7 +14,7 @@ const Home = () => {
 
 
     return (
-        <Container className='us'>
+        <Container fluid className='us'>
             <Row>
                 <h1>Entrena, cambia de hábitos, conecta con lo importante para mejorar tu vida</h1>
                 <Col lg='6' sm='12'>
@@ -36,13 +36,13 @@ const Home = () => {
                             data-aos="fade-right" data-aos-duration="2000" />
                         </Col>
                         <Col lg='6' sm='12'>
-                            <Image rounded fluid src={Img2} alt="Entrenamiento Corporal" className='usImg'
+                            <Image rounded fluid src={Img2} alt="Meditación" className='usImg'
                             data-aos="fade-left" data-aos-duration="2000" />
                         </Col>
                     </Row>
                     <Row className='d-flex justify-content-center'>
                     <Col lg='6' sm='12'>
-                            <Image rounded fluid src={Img3} alt="Entrenamiento Corporal" className='usImg mx-auto'
+                            <Image rounded fluid src={Img3} alt="Alimentación saludable" className='usImg mx-auto'
                             data-aos="fade-up" data-aos-duration="2000" />
                         </Col>
                     </Row>

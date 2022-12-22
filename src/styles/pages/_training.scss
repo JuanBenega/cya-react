@@ -1,0 +1,29 @@
+.training {
+    font-family: $fuente;
+    font-size: $size-fuente-header;
+}
+
+.trainRow {
+    padding: 0 2rem;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+    @include phone {
+        font-size: $size-fuente-responsive;
+        text-align: center;
+        padding: $pad-bot;
+    }
+}
+
+.entrenamiento-par {
+    padding-left: 2rem;
+
+    @include phone {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
