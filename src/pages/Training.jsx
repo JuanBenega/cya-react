@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Row, Container, Col, Image } from 'react-bootstrap';
 import Img1 from '../img/entrenamiento-1.avif'
 import Img2 from '../img/entrenamiento-2.avif'
@@ -6,19 +6,30 @@ import Img3 from '../img/entrenamiento-3.avif'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+//import Button from 'react-bootstrap/Button';
+import Offcanvas from 'react-bootstrap/Offcanvas';
+
 const Training = () => {
 
   useEffect(() => {
     AOS.init();
   }, [])
 
-  return (
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const toggleShow = () => setShow(true);
+
+
+
+return (
+  <>
     <Container fluid className='training'>
       <h1>Programas de entrenamiento integrales</h1>
       {/* Articulo 1 */}
       <Row className='trainRow'>
         <Col lg={8} className='article'>
-          <h2>Programa Bases</h2>
+          <h2 onClick={toggleShow}>Programa Bases</h2>
           <p>La base del bienestar corporal es tener un cuerpo fuerte, flexible y resistente. Uno de los
             mayores problemas de la actualidad es el sedentarismo y la poca movilidad corporal, esto trae
             consigo problemas como obesidad, hipertensión, diabetes, fragilidad corporal, etc. Tengas la
@@ -70,7 +81,18 @@ const Training = () => {
         </Col>
       </Row>
     </Container>
-  )
+
+    <Offcanvas show={show} onHide={handleClose} placement='end'>
+      <Offcanvas.Header closeButton>
+        <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+      </Offcanvas.Header>
+      <Offcanvas.Body>
+        Some text as placeholder. In real life you can have the elements you
+        have chosen. Like, text, images, lists, etc.
+      </Offcanvas.Body>
+    </Offcanvas>
+  </>
+)
 }
 
 export default Training
